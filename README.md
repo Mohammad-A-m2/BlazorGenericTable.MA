@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://github.com/Mohammad-A-m2/MA.BlazorGenericTable/blob/main/wwwroot/MA.BlazorGenericTable.jpg" alt="Project Logo" width="300">
+  <img src="https://github.com/Mohammad-A-m2/MA.BlazorGenericTable/blob/main/wwwroot/BlazorGenericTable.MA.jpg" alt="Project Logo" width="300">
 </div>
 
 # Client Project Guide: Using MA.BlazorGenericTable
@@ -24,7 +24,7 @@ You can add **MA.BlazorGenericTable** to your project using either the NuGet Pac
 
 ### Using Package Manager Console
 
-```powershell
+```Powershell
 Install-Package MA.BlazorGenericTable -Version 1.0.0
 ```
 
@@ -36,5 +36,4 @@ dotnet add package MA.BlazorGenericTable --version 1.0.0
 ###Usage
 After installing the package, import the namespace in your Blazor component:
 ```Razor
-@using MA.BlazorGenericTable
-```
+@using Common.CRUD.Table.Components.Components```

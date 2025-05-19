@@ -1,9 +1,9 @@
-﻿using Common.CRUD.Table.Components.Models.Elements;
-using Common.CRUD.UseCase.Client.Models;
-using Common.CRUD.UseCase.Client.Models.Data;
+﻿using BlazorGenericTable.MA.Models.Elements;
+using BlazorGenericTable.MA.UseCase.Client.Models;
+using BlazorGenericTable.MA.UseCase.Client.Models.Data;
 using Microsoft.AspNetCore.Components;
 
-namespace Common.CRUD.UseCase.Client.Pages
+namespace BlazorGenericTable.MA.UseCase.Client.Pages
 {
     public partial class TableCreatorComponent : ComponentBase
     {
@@ -97,7 +97,6 @@ namespace Common.CRUD.UseCase.Client.Pages
             {
                 _selectedItems.Clear();
             }
-            IsHeaderCheckBoxChanged(new());
         }
 
         List<Person> _selectedHeaderItems = new();

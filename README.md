@@ -36,4 +36,4 @@ dotnet add package MA.BlazorGenericTable --version 1.0.0
 ###Usage
 After installing the package, import the namespace in your Blazor component:
 ```Razor
-@using Common.CRUD.Table.Components.Components```
+@using BlazorGenericTable.MA

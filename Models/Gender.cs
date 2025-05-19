@@ -1,4 +1,4 @@
-﻿namespace Common.CRUD.UseCase.Client.Models
+﻿namespace BlazorGenericTable.MA.UseCase.Client.Models
 {
     public enum Gender
     {

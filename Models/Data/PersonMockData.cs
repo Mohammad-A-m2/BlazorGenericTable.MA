@@ -1,4 +1,4 @@
-﻿namespace Common.CRUD.UseCase.Client.Models.Data
+﻿namespace BlazorGenericTable.MA.UseCase.Client.Models.Data
 {
     public static class PersonMockData
     {

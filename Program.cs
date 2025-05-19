@@ -1,4 +1,4 @@
-using Common.CRUD.UseCase.Client;
+using BlazorGenericTable.MA.UseCase.Client;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 

@@ -1,0 +1,57 @@
+﻿@page "/update-log"
+
+<div class="update-log">
+    <h2>🔹 New Updates</h2>
+
+    <h3>✨ Features</h3>
+    @if (Features.Count > 0)
+    {
+        <ul>
+            @foreach (var feature in Features)
+            {
+                <li>@feature</li>
+            }
+        </ul>
+    }
+    else
+    {
+        <p>No new features added yet.</p>
+    }
+
+    <h3>🐞 Bug Fixes</h3>
+    @if (BugFixes.Count > 0)
+    {
+        <ul>
+            @foreach (var bug in BugFixes)
+            {
+                <li>@bug</li>
+            }
+        </ul>
+    }
+    else
+    {
+        <p>No bug fixes reported yet.</p>
+    }
+</div>
+
+@code {
+    public List<string> Features { get; set; } = new();
+    public List<string> BugFixes { get; set; } = new();
+
+    public void AddFeature(string feature)
+    {
+        Features.Add(feature);
+    }
+
+    public void AddBugFix(string bug)
+    {
+        BugFixes.Add(bug);
+    }
+
+    protected override void OnInitialized()
+    {
+        AddBugFix(" Fixed deletion issues when select or deselect items.");
+        AddBugFix(" Fixed minor bugs.");
+        AddFeature(" Improved selection behavior.");
+    }
+}

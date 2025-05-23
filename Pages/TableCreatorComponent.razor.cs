@@ -10,6 +10,7 @@ namespace BlazorGenericTable.MA.UseCase.Client.Pages
         private List<Person> _people = PersonMockData.GetPersons();
         private TableSettings _tableSettings = new();
         private string _paginationClick = string.Empty;
+        private LoadingBarSettings _LoadingBarSettings = new();
 
         private TableClass _tableClass = new()
         {
@@ -19,11 +20,11 @@ namespace BlazorGenericTable.MA.UseCase.Client.Pages
             TdRowsClass = "my-td-class",
             DeleteButtonClass = "btn btn-outline-danger",
             SelectBoxClass = string.Empty,
-            DeleteIconClass= "fa fa-trash"
+            DeleteIconClass = "fa fa-trash"
         };
         private TableStyle _tableStyle = new()
         {
-            TableBaseStyle = "width:100%; border-collapse: collapse; margin-bottom: 20px;",
+            TableBaseStyle = "margin-bottom: 10px;",
             //TrRowStyle = "background-color: #f9f9f9;  // it added by CSS",
             ThHeaderStyle = "padding: 12px; border: 1px solid #ddd; text-align: left; background-color: #f4f4f4;",
             TdRowStyle = "padding: 12px; border: 1px solid #ddd; text-align: left;",
@@ -54,8 +55,8 @@ namespace BlazorGenericTable.MA.UseCase.Client.Pages
                 },
                 CheckboxParameters = new()
                 {
-                    HeaderToolTip="Test tooltip header",
-                    RowToolTip ="Test tooltip row",
+                    HeaderToolTip = "Test tooltip header",
+                    RowToolTip = "Test tooltip row",
                     CheckboxAttributes = checkboxAttributes,
                     IsHeaderDisabled = false
                 }
@@ -72,8 +73,18 @@ namespace BlazorGenericTable.MA.UseCase.Client.Pages
                 LastButtonStyle = "background-color:#f9f9f9;",
                 PageSize = 2,
                 TotalCount = PersonMockData.GetPersons().Count,
-                PageSizeOptions = [2,4, 5, 10, 20, 50, 100],
+                PageSizeOptions = [2, 4, 5, 10, 20, 50, 100],
                 PageSizeStyle = "test;"
+            };
+            _LoadingBarSettings = new()
+            {
+                HasLoading = true,
+                ProgressClass = "test",
+                ProgressStyle = "test style loading",
+                WrapperClass = "Wrapper clas test",
+                WrapperStyle = "Wrapper style test",
+                ProgressBarLoadingText = "Loading data please wait...",
+                SpinnerLoadingText = "Loading..."
             };
         }
 
@@ -139,9 +150,10 @@ namespace BlazorGenericTable.MA.UseCase.Client.Pages
 
         private async Task<ICollection<Person>> GetPeopleByPageNumber(int pageNumber)
         {
+            await Task.Delay(2000);
             return await Task.FromResult(_people.Skip((pageNumber - 1) * _paginationSetting.PageSize)
                 .Take(_paginationSetting.PageSize).ToList());
-        } 
+        }
 
         private void PageSizeChanged(int pageSizeNumber)
         {

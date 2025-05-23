@@ -1,12 +1,12 @@
 <div align="center">
-  <img src="https://github.com/Mohammad-A-m2/MA.BlazorGenericTable/blob/main/wwwroot/BlazorGenericTable.MA.jpg" alt="Project Logo" width="300">
+  <img src="https://github.com/Mohammad-A-m2/BlazorGenericTable.MA/blob/main/wwwroot/BlazorGenericTable.MA.jpg" alt="Project Logo" width="300">
 </div>
 
-# Client Project Guide: Using MA.BlazorGenericTable
+# Client Project Guide: Using BlazorGenericTable.MA
 
-**MA.BlazorGenericTable** is a dynamic, feature-rich generic table component designed for C# and Blazor applications. Built on .NET 6 and enhanced by modern C# features like nullable enablement and implicit usings, it enables you to present and interact with data seamlessly. In addition to supporting selection, deletion, and pagination out-of-the-box, it also allows you to easily customize table styles by adding your own CSS classes.
+**BlazorGenericTable.MA** is a dynamic, feature-rich generic table component designed for C# and Blazor applications. Built on .NET 6 and enhanced by modern C# features like nullable enablement and implicit usings, it enables you to present and interact with data seamlessly. In addition to supporting selection, deletion, and pagination out-of-the-box, it also allows you to easily customize table styles by adding your own CSS classes.
 
-This document will guide you through the steps to incorporate and use **MA.BlazorGenericTable** in your client project.
+This document will guide you through the steps to incorporate and use **BlazorGenericTable.MA** in your client project.
 
 ---
 
@@ -20,20 +20,20 @@ This document will guide you through the steps to incorporate and use **MA.Blazo
 
 ## Installation
 
-You can add **MA.BlazorGenericTable** to your project using either the NuGet Package Manager Console or the .NET CLI.
+You can add **BlazorGenericTable.MA** to your project using either the NuGet Package Manager Console or the .NET CLI.
 
 ### Using Package Manager Console
 
 ```Powershell
-Install-Package MA.BlazorGenericTable -Version 1.0.0
+Install-Package BlazorGenericTable.MA -Version 1.0.4
 ```
 
 ### Using .NET CLI
  ```bash
-dotnet add package MA.BlazorGenericTable --version 1.0.0
+dotnet add package BlazorGenericTable.MA --version 1.0.4
  ```
 
-###Usage
+### Usage
 After installing the package, import the namespace in your Blazor component:
 ```Razor
 @using BlazorGenericTable.MA

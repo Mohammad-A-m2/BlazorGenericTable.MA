@@ -12,6 +12,8 @@ namespace BlazorGenericTable.MA.UseCase.Client.Models
         public Gender Gender { get; set; }
         public List<string> Jobs { get; set; } = new();
         public bool HasJob { get; set; }
+        public DateOnly Birthdate { get; set; }
+        public DateTime StartWorkAt { get; set; }
 
         public override bool Equals(object obj)
         {

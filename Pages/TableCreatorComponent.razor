@@ -42,10 +42,12 @@
                   PageNavigationCallback="@NavigationClick"
                   PageForwardCallback="@ForwardClick"
                   LastPageCallback="@LastPageClick"
-                  PageSizeCallback="@PageSizeChanged">
+                  PageSizeCallback="@PageSizeChanged"
+                  LoadingBarSettings="@_LoadingBarSettings"
+                  IsTableResponsive="true">
         <FooterContent>
             <tr style="text-align: center">
-                <td colspan="7">
+                <td colspan="9">
                     <p>This is a table footer</p>
                 </td>
             </tr>

@@ -16,7 +16,9 @@
                     {
                         "Programmer","Developer","Product owner"
                     }, 
-                    HasJob = true
+                    HasJob = true,
+                    Birthdate = DateOnly.Parse("1992-02-02"),
+                    StartWorkAt = DateTime.Now.AddYears(-1)
                 },
                 new()
                 {
@@ -24,6 +26,8 @@
                     Name = "Jenifer",
                     Description = "Leader",
                     Gender = Gender.Female,
+                    Birthdate = DateOnly.Parse("1982-04-22"),
+                    StartWorkAt = DateTime.Now.AddYears(-3)
                 },
                 new()
                 {
@@ -35,7 +39,9 @@
                     {
                         "Product owner", "Leader", "Other"
                     },
-                    HasJob = true
+                    HasJob = true,
+                    Birthdate = DateOnly.Parse("1990-12-12"),
+                    StartWorkAt = DateTime.Now.AddYears(-6)
                 },
                 new()
                 {
@@ -46,7 +52,9 @@
                     Jobs =new()
                     {
                         "Programmer","Product owner"
-                    }
+                    },
+                    Birthdate = DateOnly.Parse("1998-05-04"),
+                    StartWorkAt = DateTime.Now.AddYears(-2)
                 },
                 new()
                 {
@@ -54,6 +62,8 @@
                     Name = "Jena",
                     Description = "Leader",
                     Gender = Gender.Female,
+                    Birthdate = DateOnly.Parse("1982-5-11"),
+                    StartWorkAt = DateTime.Now.AddYears(-9)
                 },
                 new()
                 {
@@ -65,7 +75,9 @@
                     {
                         "Product owner", "Leader", "Other"
                     },
-                    HasJob = true
+                    HasJob = true,
+                    Birthdate = DateOnly.Parse("2002-8-12"),
+                    StartWorkAt = DateTime.Now.AddYears(-1)
                 }
             };
         }

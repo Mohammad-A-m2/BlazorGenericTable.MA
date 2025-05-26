@@ -25,12 +25,12 @@ You can add **BlazorGenericTable.MA** to your project using either the NuGet Pac
 ### Using Package Manager Console
 
 ```Powershell
-Install-Package BlazorGenericTable.MA -Version 1.0.4
+Install-Package BlazorGenericTable.MA -Version 1.0.5
 ```
 
 ### Using .NET CLI
  ```bash
-dotnet add package BlazorGenericTable.MA --version 1.0.4
+dotnet add package BlazorGenericTable.MA --version 1.0.5
  ```
 
 ### Usage

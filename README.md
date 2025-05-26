@@ -9,7 +9,16 @@
 This document will guide you through the steps to incorporate and use **BlazorGenericTable.MA** in your client project.
 
 ---
+### Features
 
+- Making the table responsive to only one parameter.  
+  ![[Responsive Table](IMAGE_LINK_HERE)](https://github.com/Mohammad-A-m2/BlazorGenericTable.MA/blob/main/wwwroot/tableImages/TableOne.jpg)
+- Add a loading bar when data is loaded in the first render.  
+  ![[Loading Bar](IMAGE_LINK_HERE)](https://github.com/Mohammad-A-m2/BlazorGenericTable.MA/blob/main/wwwroot/tableImages/First%20loading%20bar.jpg)
+- Add spinner loading for deleting and changing the page.  
+  ![[Spinner Loading](IMAGE_LINK_HERE)](https://github.com/Mohammad-A-m2/BlazorGenericTable.MA/blob/main/wwwroot/tableImages/Circle%20Loading.jpg)
+- Add dialog box for delete button to get its confirmation.  
+  ![[Delete Confirmation](IMAGE_LINK_HERE)](https://github.com/Mohammad-A-m2/BlazorGenericTable.MA/blob/main/wwwroot/tableImages/Delete%20confirmation.jpg)
 ## Prerequisites
 
 - **Visual Studio 2022** or later with .NET 6 SDK.

@@ -1,0 +1,32 @@
+﻿/* Base styling for the table */
+::deep .styled-table {
+    border-collapse: collapse;
+    margin: 30px auto;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 0.9em;
+    min-width: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+}
+
+    ::deep .styled-table tbody tr:nth-child(even) {
+        background-color: #f3f7fa;
+    }
+
+    /* Hover effect for rows */
+    ::deep .styled-table tbody tr:hover {
+        background-color: #d3e0ea;
+        transition: background-color 0.3s ease
+    }
+
+    /* Styling the footer */
+    ::deep .styled-table tfoot tr {
+        background-color: #4F72A3;
+        color: white;
+        text-align: center;
+        font-weight: 600;
+    }
+
+        ::deep .styled-table tfoot tr td {
+            padding: 10px;
+        }

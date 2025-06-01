@@ -18,9 +18,16 @@ namespace BlazorGenericTable.MA.UseCase.Client.Pages
             TrRowsClass = "my-tr-class",
             ThHeaderClass = "my-th-class",
             TdRowsClass = "my-td-class",
-            DeleteButtonClass = "btn btn-outline-danger",
+            OperationButtonsClass = new()
+            {
+                ViewButtonClass = "btn btn-outline-primary",
+                ViewButtonIconClass = "fa fa-eye",
+                DeleteButtonClass = "btn btn-outline-danger",
+                DeleteButtonIconClass = "fa fa-trash",
+                EditButtonClass = "btn btn-outline-primary",
+                EditButtonIconClass = "fa fa-pencil-square-o ",
+            },
             SelectBoxClass = string.Empty,
-            DeleteIconClass = "fa fa-trash"
         };
         private TableStyle _tableStyle = new()
         {
@@ -30,16 +37,24 @@ namespace BlazorGenericTable.MA.UseCase.Client.Pages
             " color: #ffffff; text-align: left; font-weight: bold;",
             ThHeaderStyle = "padding: 12px 15px;",
             TdRowStyle = "border-bottom: 1px solid #dddddd; padding: 2px;",
-            DeleteButtonStyle = "text-decoration-line: underline;",
+            OperationButtonsStyle = new()
+            {
+                ViewButtonIconStyle = "text-decoration-line: underline;",
+                ViewButtonStyle = "test style view",
+                DeleteButtonIconStyle = "text-decoration-line: underline;",
+                DeleteButtonStyle = "test style delete",
+                EditButtonIconStyle = "text-decoration-line: underline;",
+                EditButtonStyle = "test edit style"
+            },
         };
 
-        private PaginationSetting _paginationSetting = new();
+        private PaginationSetting? _paginationSetting = new();
 
         protected override void OnInitialized()
         {
             Dictionary<string, object> checkboxAttributes = new()
             {
-                { "ID", "object Test" }
+                 { "ID", Guid.NewGuid().ToString() }
             };
             _tableSettings = new()
             {
@@ -103,7 +118,10 @@ namespace BlazorGenericTable.MA.UseCase.Client.Pages
         {
             _deleteText = "You have deleted a " + person.Name;
             _people = _people.Where(c => !c.Equals(person)).ToList(); // Reassign list
-            _paginationSetting.TotalCount = _people.Count;
+            if (_paginationSetting is not null)
+            {
+                _paginationSetting.TotalCount = _people.Count;
+            }
             StateHasChanged();
         }
 
@@ -161,13 +179,29 @@ namespace BlazorGenericTable.MA.UseCase.Client.Pages
         private async Task<ICollection<Person>> GetPeopleByPageNumber(int pageNumber)
         {
             await Task.Delay(2000);
-            return await Task.FromResult(_people.Skip((pageNumber - 1) * _paginationSetting.PageSize)
-                .Take(_paginationSetting.PageSize).ToList());
+            if (_paginationSetting is not null)
+            {
+                return await Task.FromResult(_people.Skip((pageNumber - 1) * _paginationSetting.PageSize)
+                    .Take(_paginationSetting.PageSize).ToList());
+            }
+            return await Task.FromResult(_people);
         }
 
         private void PageSizeChanged(int pageSizeNumber)
         {
             _paginationClick = "Page size changed to " + pageSizeNumber;
+        }
+
+        private void OpenViewPage(Person person)
+        {
+            //Open your view page
+            Console.WriteLine("View=>" + person.Name);
+        }
+
+        private void OpenEditPage(Person person)
+        {
+            //Open your edit page
+            Console.WriteLine("Edit=>" + person.Name);
         }
     }
 }

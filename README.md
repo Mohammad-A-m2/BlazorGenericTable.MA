@@ -12,7 +12,7 @@ This document will guide you through the steps to incorporate and use **BlazorGe
 ### Features
 
 - Making the table responsive to only one parameter.  
-  ![[Responsive Table](IMAGE_LINK_HERE)](https://github.com/Mohammad-A-m2/BlazorGenericTable.MA/blob/main/wwwroot/tableImages/TableOne.jpg)
+  ![[Responsive Table](IMAGE_LINK_HERE)](https://github.com/Mohammad-A-m2/BlazorGenericTable.MA/blob/main/wwwroot/tableImages/TableNew.jpg)
 - Add a loading bar when data is loaded in the first render.  
   ![[Loading Bar](IMAGE_LINK_HERE)](https://github.com/Mohammad-A-m2/BlazorGenericTable.MA/blob/main/wwwroot/tableImages/First%20loading%20bar.jpg)
 - Add spinner loading for deleting and changing the page.  
@@ -34,12 +34,12 @@ You can add **BlazorGenericTable.MA** to your project using either the NuGet Pac
 ### Using Package Manager Console
 
 ```Powershell
-Install-Package BlazorGenericTable.MA -Version 1.0.5
+Install-Package BlazorGenericTable.MA -Version 1.0.6
 ```
 
 ### Using .NET CLI
  ```bash
-dotnet add package BlazorGenericTable.MA --version 1.0.5
+dotnet add package BlazorGenericTable.MA --version 1.0.6
  ```
 
 ### Usage

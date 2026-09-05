@@ -38,6 +38,7 @@ You can add **BlazorGenericTable.MA** to your project using either the NuGet Pac
 .Net 7 => Install-Package BlazorGenericTable.MA -Version 1.1.0
 .Net 8 => Install-Package BlazorGenericTable.MA -Version 1.2.0
 .Net 9 => Install-Package BlazorGenericTable.MA -Version 1.3.0
+.Net 10 => Install-Package BlazorGenericTable.MA -Version 1.4.0
 ```
 
 ### Using .NET CLI
@@ -46,6 +47,7 @@ You can add **BlazorGenericTable.MA** to your project using either the NuGet Pac
 .Net 7 => dotnet add package BlazorGenericTable.MA --version 1.1.0
 .Net 8 => dotnet add package BlazorGenericTable.MA --version 1.2.0
 .Net 9 => dotnet add package BlazorGenericTable.MA --version 1.3.0
+.Net 10 => dotnet add package BlazorGenericTable.MA --version 1.4.0
  ```
 
 ### Usage
